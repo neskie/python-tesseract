@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: PyTesseract
+Version: 0.5
+Summary: Bindings for the tesseract ocr
+Home-page: None
+Author: Neskie Manuel
+Author-email: neskiem@gmail.com
+License: Apache License
+Description: 
+        This provides the necssary python bindings to call tesseract
+        within Python. In conjunction with Image Processing libraries,
+        this can be used to expand the capabilities.
+        
+Platform: UNKNOWN
