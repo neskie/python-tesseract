@@ -21,12 +21,12 @@ t = tesseract.Tesseract(lang="eng")
 #Produced Text Output
 t.filename="image1.tif"
 t.mode = 0
-t.text()
+t.get_text()
 
 #Produced Box output
 t.filename="image2.tif"
 t.mode = 1
-t.text()
+t.get_text()
 
 Copyright 2009 Neskie Manuel.
 
