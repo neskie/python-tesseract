@@ -12,6 +12,14 @@ fixed in time.
 python setup.py build
 sudo python setup.py install
 
+= Dependencies =
+
+For this to build on Ubuntu you need
+
+libiulib-dev
+libtiff
+tesseract-2.04
+
 = Usage =
 
 import tesseract
