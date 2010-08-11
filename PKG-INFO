@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
-Name: PyTesseract
-Version: 0.5
+Name: python-tesseract
+Version: 0.6
 Summary: Bindings for the tesseract ocr
-Home-page: None
+Home-page: http://github.com/neskie/python-tesseract
 Author: Neskie Manuel
 Author-email: neskiem@gmail.com
 License: Apache License

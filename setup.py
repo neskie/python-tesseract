@@ -1,4 +1,7 @@
 from distutils.core import setup,Extension
+import os
+os.environ['CC'] = 'g++'
+
 setup(name = "PyTesseract",
       version = "0.5",
       description = "Bindings for the tesseract ocr",

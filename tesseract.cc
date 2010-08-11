@@ -96,6 +96,9 @@ get_text(Tesseract *self, PyObject *args)
 		imageptr->get_bpp()/8, bytes_per_line, 0, 0,
 		imageptr->get_xsize(), imageptr->get_ysize(), imageptr->get_ysize());
 	}
+	else {
+		text = strdup("");
+	}
 	return  PyString_FromString(text);
 
 }
@@ -105,7 +108,7 @@ Tesseract_init(Tesseract *self, PyObject *args, PyObject *kwds)
 {
 	TessBaseAPI *api = new TessBaseAPI();
 	PyObject *lang=NULL, *filename=NULL, *stmp;
-	static char *kwlist[] = {"lang","filename","mode", NULL};
+	static char *kwlist[] = {strdup("lang") ,strdup("filename"), strdup("mode"), NULL};
 
 	if (! PyArg_ParseTupleAndKeywords(args,kwds, "|OOi",kwlist,
 						&lang,&filename,&self->mode))
@@ -132,12 +135,12 @@ Tesseract_init(Tesseract *self, PyObject *args, PyObject *kwds)
 }
 
 static PyMemberDef Tesseract_members[] = {
-	{"lang", T_OBJECT_EX, offsetof(Tesseract, lang),0,
-         "Tesseract Language"},
-	{"filename", T_OBJECT_EX, offsetof(Tesseract, filename),0,
-         "Tesseract Filename"},
-	{"mode", T_INT, offsetof(Tesseract, mode),0,
-         "Tesseract mode"},
+	{strdup("lang"), T_OBJECT_EX, offsetof(Tesseract, lang),0,
+         strdup("Tesseract Language")},
+	{strdup("filename"), T_OBJECT_EX, offsetof(Tesseract, filename),0,
+         strdup("Tesseract Filename")},
+	{strdup("mode"), T_INT, offsetof(Tesseract, mode),0,
+         strdup("Tesseract mode")},
 	{NULL} /*Sentinel */
 };
 
